@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "name_original": "Nep C azCocaColazero",
+      "quantity": 2.0,
+      "unit_price": 8.69,
+      "total": 17.39,
+      "tax": "A"
+    },
+    {
+      "name_original": "WorkiązłoSan35l x 30",
+      "quantity": 1.0,
+      "unit_price": 3.69,
+      "total": 3.7,
+      "tax": "A"
+    },
+    {
+      "name_original": "Czekkercikokos250g ń",
+      "quantity": 1.0,
+      "unit_price": 17.99,
+      "total": 17.99,
+      "tax": "A"
+    },
+    {
+      "name_original": "CukNerdRainbowl41,7g",
+      "quantity": 3.0,
+      "unit_price": 9.99,
+      "total": 29.98,
+      "tax": "A"
+    },
+    {
+      "name_original": "KARTA",
+      "quantity": 0.0,
+      "unit_price": 7.0,
+      "total": 4.0,
+      "tax": "A"
+    }
+  ],
+  "total_paid": 0.0
+}
