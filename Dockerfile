@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY OllamaTest.py .
-COPY send_to_ollama.py .
+COPY ocr_converter.py .
+COPY Ocr_json_conv.py .
 
 RUN mkdir -p documents output_text output_json

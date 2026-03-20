@@ -1,0 +1,189 @@
+{
+  "retailer": "Generic Retailer",
+  "retailer_id": "Unknown",
+  "items": [
+    {
+      "product": "Torba T-SHIRT A 1.000%",
+      "quantity": 0.79,
+      "unit_price": null,
+      "total": 0.79,
+      "product_en": "Tote bag"
+    },
+    {
+      "product": "Torba T-SHIRT A 1.000%",
+      "quantity": 79.0,
+      "unit_price": null,
+      "total": 0.79,
+      "product_en": "Tote bag"
+    },
+    {
+      "product": "Torba T-SHIRT A 1000%",
+      "quantity": 0.79,
+      "unit_price": null,
+      "total": 0.79,
+      "product_en": "Tote bag t shirt"
+    },
+    {
+      "product": "*akarspaguobruduUe |",
+      "quantity": 1.0,
+      "unit_price": 2.45,
+      "total": 2.45,
+      "product_en": "Spaghetti Bolognese"
+    },
+    {
+      "product": "Makarspaguoousvug © 1.000%",
+      "quantity": 2.45,
+      "unit_price": null,
+      "total": 245.0,
+      "product_en": "Macaroni"
+    },
+    {
+      "product": "RyżBiatyDługolkg €",
+      "quantity": 1000.0,
+      "unit_price": 3.89,
+      "total": 3890.0,
+      "product_en": "Polish Cooked Long Grain Rice"
+    },
+    {
+      "product": "RyżBiałyDlugolkg € 1000%",
+      "quantity": 3.89,
+      "unit_price": null,
+      "total": 3.89,
+      "product_en": "White Long Grain Rice"
+    },
+    {
+      "product": "Udo z kur meg p kg €",
+      "quantity": 1734.0,
+      "unit_price": 13.99,
+      "total": 24258.66,
+      "product_en": "Chicken liver 500g €"
+    },
+    {
+      "product": "Cebula Czerw Opa Cc",
+      "quantity": 1000.0,
+      "unit_price": 4.99,
+      "total": 4990.0,
+      "product_en": "Red Onion"
+    },
+    {
+      "product": "Udo z kur mag p kg © 1701%",
+      "quantity": 13.99,
+      "unit_price": null,
+      "total": 2380.0,
+      "product_en": "Duck breast from duck leg meat 170g"
+    },
+    {
+      "product": "NapCocaColaZerol,7£ A  1000%",
+      "quantity": 8.65,
+      "unit_price": null,
+      "total": 8.65,
+      "product_en": "Zero Sugar Coca Cola"
+    },
+    {
+      "product": "But Plastik kaucja brak",
+      "quantity": 1.0,
+      "unit_price": 50.0,
+      "total": 50.0,
+      "product_en": "Plastic caulk"
+    },
+    {
+      "product": "OlejRzepakPośski11 €",
+      "quantity": 1000.0,
+      "unit_price": 8.49,
+      "total": 8490.0,
+      "product_en": "Polish oil in a raffia bag from Poleski"
+    },
+    {
+      "product": "Czosnek Opak 2509 | ©  1000%",
+      "quantity": 7.99,
+      "unit_price": null,
+      "total": 7.99,
+      "product_en": "Garlic in jar"
+    },
+    {
+      "product": "aja Sci6t Mx20szt © 1000%",
+      "quantity": 19.99,
+      "unit_price": null,
+      "total": 19.99,
+      "product_en": "Aja Science Mix 2000"
+    },
+    {
+      "product": "BatLetheAaASszt A 1.000%",
+      "quantity": 10.99,
+      "unit_price": null,
+      "total": 10.99,
+      "product_en": "Bread"
+    },
+    {
+      "product": "BatEnergMaxAAdszt =A 1.000",
+      "quantity": 1399.0,
+      "unit_price": null,
+      "total": 1399.0,
+      "product_en": "Energy Max Adhesive"
+    },
+    {
+      "product": "KremD CiaNive300ml (A  1000%",
+      "quantity": 2649.0,
+      "unit_price": null,
+      "total": 2649.0,
+      "product_en": "Cream D Cinnamon 300ml"
+    },
+    {
+      "product": "wońaNŚmieci351:155 (A",
+      "quantity": 1.0,
+      "unit_price": 4.99,
+      "total": 4.99,
+      "product_en": "Wheat Flour"
+    },
+    {
+      "product": "WorkinSmieci35ix15s A",
+      "quantity": 1000.0,
+      "unit_price": 4.99,
+      "total": 4990.0,
+      "product_en": "Workin Smear 35g"
+    },
+    {
+      "product": "ProszekUltColo3,25%kg A",
+      "quantity": 1.0,
+      "unit_price": 29.99,
+      "total": 29.99,
+      "product_en": "Polish Cleaning Powder for Colored Clothes 3.25 kg"
+    },
+    {
+      "product": "EdenFreshEscopel.Bl =A  1000%x",
+      "quantity": 9.99,
+      "unit_price": null,
+      "total": 9.99,
+      "product_en": "Eden Fresh Escopol"
+    },
+    {
+      "product": "ŻelNiveaSport500mi A  1000%",
+      "quantity": 1740.0,
+      "unit_price": null,
+      "total": 1749.0,
+      "product_en": "Nivea Sport 500ml A 1000"
+    },
+    {
+      "product": "rairykyntemon/sum (a ono x",
+      "quantity": 1149.0,
+      "unit_price": null,
+      "total": 1149.0,
+      "product_en": "Raspberry Sorbet"
+    },
+    {
+      "product": "MgiełkaDyCiała200mi =A",
+      "quantity": 1000.0,
+      "unit_price": 9.99,
+      "total": 9990.0,
+      "product_en": "Body Wash"
+    },
+    {
+      "product": "Torba T-SHIRT A 1.000%",
+      "quantity": 0.79,
+      "unit_price": null,
+      "total": 0.79,
+      "product_en": "Tote bag"
+    }
+  ],
+  "total_paid": 241.02
+}
