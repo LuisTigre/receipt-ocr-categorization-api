@@ -1,15 +1,21 @@
 import json
-import requests
 import os
 from pathlib import Path
+from ollama import Client
 
-INPUT_FOLDER    = "output_json"
-OUTPUT_FOLDER   = "output_json_translated"
-OLLAMA_URL      = "http://100.104.103.64:11434/api/generate"
-MODEL_NAME      = "llama3.2"
-REQUEST_TIMEOUT = 120
+INPUT_FOLDER  = "output_json"
+OUTPUT_FOLDER = "output_json_translated"
+MODEL_NAME    = "gemma3:4b"
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+
+# =========================
+# OLLAMA CLOUD CLIENT
+# =========================
+OLLAMA_CLIENT = Client(
+    host="https://ollama.com",
+    headers={"Authorization": "Bearer " + os.environ.get("OLLAMA_API_KEY", "")}
+)
 
 # =========================
 # STATIC OVERRIDES
@@ -23,14 +29,13 @@ OVERRIDES = {
     "torba tshirt":   "Shopping Bag",
     "but plastik":    "Plastic Bottle Deposit",
     "kaucja":         "Bottle Deposit",
-    "aja":   "Eggs",
+    "aja":            "Eggs",
 }
 
 # =========================
 # OVERRIDE CHECK
 # =========================
 def check_overrides(name):
-    """Check if product name matches any known override."""
     name_lower = name.lower()
     for key, translation in OVERRIDES.items():
         if key in name_lower:
@@ -41,7 +46,7 @@ def check_overrides(name):
 # TRANSLATE
 # =========================
 def translate_single(name):
-    # Check static overrides first — no Ollama call needed
+    # Check static overrides first — no API call needed
     override = check_overrides(name)
     if override:
         return override
@@ -53,17 +58,12 @@ def translate_single(name):
         f"No explanation. No punctuation. Just the product name in English."
     )
 
-    data = {
-        "model":   MODEL_NAME,
-        "prompt":  prompt,
-        "stream":  False,
-        "options": {"temperature": 0.1}
-    }
-
     try:
-        response = requests.post(OLLAMA_URL, json=data, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        return response.json().get("response", "").strip()
+        response = OLLAMA_CLIENT.chat(
+            model=MODEL_NAME,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response["message"]["content"].strip()
     except Exception as e:
         print(f"   [ERROR] {name}: {e}")
         return ""
@@ -108,13 +108,20 @@ def process_file(input_path, output_path):
 # MAIN
 # =========================
 def main():
+    api_key = os.environ.get("OLLAMA_API_KEY", "")
+    if not api_key:
+        print("[ERROR] OLLAMA_API_KEY environment variable not set.")
+        print("        Run: $env:OLLAMA_API_KEY = 'your_key_here'")
+        return
+
     files = sorted(Path(INPUT_FOLDER).glob("*.json"))
 
     if not files:
         print(f"[WARN] No JSON files found in {INPUT_FOLDER}")
         return
 
-    print(f"[INFO] Found {len(files)} file(s)\n")
+    print(f"[INFO] Found {len(files)} file(s)")
+    print(f"[INFO] Using Ollama Cloud — model: {MODEL_NAME}\n")
 
     for idx, input_file in enumerate(files, start=1):
         output_file = Path(OUTPUT_FOLDER) / input_file.name

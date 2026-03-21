@@ -1,0 +1,38 @@
+{
+  "retailer": "Action",
+  "date": "2024-02-24",
+  "total_paid": 22.85,
+  "items": [
+    {
+      "product_pl": "infinity tal.kol.ceram. 26cm rozne kol023",
+      "product_en": "Infinity colored ceramic plate 26cm various colors",
+      "quantity": 2.0,
+      "unit_price": 8.95,
+      "total": 17.9,
+      "discount": 0.0,
+      "final_total": 17.9,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "optional"
+      ],
+      "_item_categorized": true
+    },
+    {
+      "product_pl": "mieszanka krakersów 300g 005",
+      "product_en": "Cracker mix 300g",
+      "quantity": 1.0,
+      "unit_price": 4.95,
+      "total": 4.95,
+      "discount": 0.0,
+      "final_total": 4.95,
+      "category": "Food",
+      "tags": [
+        "personal care",
+        "optional"
+      ],
+      "_item_categorized": true
+    }
+  ],
+  "_categorized": "done"
+}

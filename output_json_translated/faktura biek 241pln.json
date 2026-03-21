@@ -12,8 +12,10 @@
       "product_en": "Shopping Bag",
       "category": "Other",
       "tags": [
+        "home care",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Torba T-SHIRT A",
@@ -25,8 +27,10 @@
       "product_en": "Shopping Bag",
       "category": "Other",
       "tags": [
+        "home care",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Torba T-SHIRT A",
@@ -38,8 +42,10 @@
       "product_en": "Shopping Bag",
       "category": "Other",
       "tags": [
+        "home care",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "*akarspaguobruduUe",
@@ -48,11 +54,13 @@
       "total": 2.45,
       "discount": 0.0,
       "final_total": 2.45,
-      "product_en": "Spaghetti Bolognese",
+      "product_en": "Carrot Spaghetti Bread",
       "category": "Food",
       "tags": [
+        "essential",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Makarspaguoousvug ©",
@@ -61,11 +69,13 @@
       "total": 2.45,
       "discount": 0.0,
       "final_total": 2.45,
-      "product_en": "Macaroni",
+      "product_en": "Macaroni and Cheese",
       "category": "Food",
       "tags": [
+        "essential",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "RyżBiatyDługolkg €",
@@ -74,11 +84,12 @@
       "total": 3.89,
       "discount": 0.0,
       "final_total": 3.89,
-      "product_en": "Polish rice",
+      "product_en": "Rice Biaty Long kg",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "RyżBiałyDlugolkg €",
@@ -87,11 +98,12 @@
       "total": 3.89,
       "discount": 0.0,
       "final_total": 3.89,
-      "product_en": "White Long Grain Rice",
+      "product_en": "White Rice Long kg",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Udo z kur meg p kg €",
@@ -100,11 +112,12 @@
       "total": 24.26,
       "discount": -12.46,
       "final_total": 11.8,
-      "product_en": "Chicken liver 500g €",
+      "product_en": "Thigh chicken large kg",
       "category": "Food",
       "tags": [
         "essential"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Cebula Czerw Opa C",
@@ -116,8 +129,9 @@
       "product_en": "Red Onion",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Udo z kur mag p kg ©",
@@ -126,11 +140,12 @@
       "total": 23.8,
       "discount": -12.22,
       "final_total": 11.58,
-      "product_en": "Chicken breast",
+      "product_en": "Chicken thigh ground",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "nęcmegaoweepiśUn",
@@ -139,11 +154,12 @@
       "total": 13.79,
       "discount": 0.0,
       "final_total": 13.79,
-      "product_en": "Polish sausage",
+      "product_en": "Margarine",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "NapCocaColaZerol,7£ A",
@@ -152,11 +168,13 @@
       "total": 8.65,
       "discount": 0.0,
       "final_total": 8.65,
-      "product_en": "Zero Sugar Coca Cola",
+      "product_en": "Nap Coca Cola Zero",
       "category": "Food",
       "tags": [
+        "personal care",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "But Plastik kaucja brak",
@@ -166,10 +184,12 @@
       "discount": 0.0,
       "final_total": 0.5,
       "product_en": "Plastic Bottle Deposit",
-      "category": "Other",
+      "category": "Transportation",
       "tags": [
-        "personal care"
-      ]
+        "delivery",
+        "bicycle"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "OlejRzepakPośski11 €",
@@ -178,11 +198,12 @@
       "total": 8.49,
       "discount": 0.0,
       "final_total": 8.49,
-      "product_en": "Polish oil in a raffia bag from Poleski",
-      "category": "Other",
+      "product_en": "Rapeseed Oil",
+      "category": "Food",
       "tags": [
-        "personal care"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Czosnek Opak 2509 ©",
@@ -191,11 +212,12 @@
       "total": 7.99,
       "discount": 0.0,
       "final_total": 7.99,
-      "product_en": "Garlic in jar",
+      "product_en": "Garlic Pack",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "aja Sci6t Mx20szt ©",
@@ -207,8 +229,9 @@
       "product_en": "Eggs",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "BatLetheAaASszt A",
@@ -217,11 +240,13 @@
       "total": 10.99,
       "discount": 0.0,
       "final_total": 10.99,
-      "product_en": "Bread",
+      "product_en": "Bat Lethe A",
       "category": "Food",
       "tags": [
+        "personal care",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "BatEnergMaxAAdszt A 1.000",
@@ -230,11 +255,13 @@
       "total": 13.99,
       "discount": 0.0,
       "final_total": 13.99,
-      "product_en": "Energy Max Adhesive Tape",
+      "product_en": "Bat Energy Max Adszt 1.000",
       "category": "Other",
       "tags": [
-        "personal care"
-      ]
+        "personal care",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "KremD CiaNive300ml A",
@@ -243,11 +270,13 @@
       "total": 26.49,
       "discount": 0.0,
       "final_total": 26.49,
-      "product_en": "Creamy Chicken Soup 300ml A",
+      "product_en": "Cream Vanilla 300ml",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "wońaNŚmieci351:155 A",
@@ -256,11 +285,14 @@
       "total": 4.99,
       "discount": 0.0,
       "final_total": 4.99,
-      "product_en": "Wheat Flour",
-      "category": "Food",
+      "product_en": "waste bin",
+      "category": "Hygiene",
       "tags": [
-        "optional"
-      ]
+        "personal care",
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "WorkinSmieci35ix15s A",
@@ -269,11 +301,13 @@
       "total": 4.99,
       "discount": 0.0,
       "final_total": 4.99,
-      "product_en": "Workin Smear 35g",
-      "category": "Other",
+      "product_en": "Working Smelly 35 x 15s",
+      "category": "Hygiene",
       "tags": [
-        "personal care"
-      ]
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "ProszekUltColo3,25%kg A",
@@ -282,11 +316,13 @@
       "total": 29.99,
       "discount": 0.0,
       "final_total": 29.99,
-      "product_en": "Polish cleaning powder",
-      "category": "Housing",
+      "product_en": "Ultacolor Powder 325% kg A",
+      "category": "Other",
       "tags": [
-        "essential"
-      ]
+        "self development",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "EdenFreshEscopel.Bl A",
@@ -295,11 +331,12 @@
       "total": 9.99,
       "discount": 0.0,
       "final_total": 9.99,
-      "product_en": "Eden Fresh Escuelita",
+      "product_en": "Eden Fresh Escopel",
       "category": "Food",
       "tags": [
-        "optional"
-      ]
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "ŻelNiveaSport500mi A",
@@ -308,12 +345,13 @@
       "total": 17.49,
       "discount": 0.0,
       "final_total": 17.49,
-      "product_en": "Nivea Sport 500ml A",
+      "product_en": "Nivea Sport Gel 500 ml",
       "category": "Hygiene",
       "tags": [
         "personal care",
         "essential"
-      ]
+      ],
+      "_item_categorized": true
     },
     {
       "product": "rairykyntemon/sum a",
@@ -322,11 +360,13 @@
       "total": 11.49,
       "discount": 0.0,
       "final_total": 11.49,
-      "product_en": "Raryikyntemon Sum A",
-      "category": "Other",
+      "product_en": "airy ointment",
+      "category": "Hygiene",
       "tags": [
-        "personal"
-      ]
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "MgiełkaDyCiała200mi A",
@@ -335,12 +375,13 @@
       "total": 9.99,
       "discount": 0.0,
       "final_total": 9.99,
-      "product_en": "Body Wash",
+      "product_en": "Body Mist 200ml",
       "category": "Hygiene",
       "tags": [
         "personal care",
-        "essential"
-      ]
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
       "product": "Torba T-SHIRT A",
@@ -352,9 +393,12 @@
       "product_en": "Shopping Bag",
       "category": "Other",
       "tags": [
+        "home care",
         "optional"
-      ]
+      ],
+      "_item_categorized": true
     }
   ],
-  "total_paid": 241.02
+  "total_paid": 241.02,
+  "_categorized": "done"
 }

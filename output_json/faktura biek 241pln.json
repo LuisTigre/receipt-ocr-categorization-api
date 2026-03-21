@@ -1,223 +1,407 @@
 {
   "retailer": "Biedronka",
-  "retailer_id": "7791011327",
+  "date": "2026-01-02",
+  "total_paid": 241.02,
   "items": [
     {
-      "product": "Torba T-SHIRT A",
+      "product_pl": "Torba T-SHIRT",
+      "product_en": "T-shirt plastic bag",
       "quantity": 1.0,
       "unit_price": 0.79,
       "total": 0.79,
       "discount": 0.0,
-      "final_total": 0.79
+      "final_total": 0.79,
+      "category": "Other",
+      "tags": [
+        "home care",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Torba T-SHIRT A",
+      "product_pl": "Torba T-SHIRT",
+      "product_en": "T-shirt plastic bag",
       "quantity": 1.0,
       "unit_price": 0.79,
       "total": 0.79,
       "discount": 0.0,
-      "final_total": 0.79
+      "final_total": 0.79,
+      "category": "Other",
+      "tags": [
+        "home care",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Torba T-SHIRT A",
+      "product_pl": "Torba T-SHIRT",
+      "product_en": "T-shirt plastic bag",
       "quantity": 1.0,
       "unit_price": 0.79,
       "total": 0.79,
       "discount": 0.0,
-      "final_total": 0.79
+      "final_total": 0.79,
+      "category": "Other",
+      "tags": [
+        "home care",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "*akarspaguobruduUe",
+      "product_pl": "MakarSpagDobru500g",
+      "product_en": "Spaghetti pasta Dobrus 500g",
       "quantity": 1.0,
       "unit_price": 2.45,
       "total": 2.45,
       "discount": 0.0,
-      "final_total": 2.45
+      "final_total": 2.45,
+      "category": "Food",
+      "tags": [
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Makarspaguoousvug ©",
+      "product_pl": "MakarSpagDobru500g",
+      "product_en": "Spaghetti pasta Dobrus 500g",
       "quantity": 1.0,
       "unit_price": 2.45,
       "total": 2.45,
       "discount": 0.0,
-      "final_total": 2.45
+      "final_total": 2.45,
+      "category": "Food",
+      "tags": [
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "RyżBiatyDługolkg €",
+      "product_pl": "RyżBiałyDługo1kg",
+      "product_en": "White long grain rice 1kg",
       "quantity": 1.0,
       "unit_price": 3.89,
       "total": 3.89,
       "discount": 0.0,
-      "final_total": 3.89
+      "final_total": 3.89,
+      "category": "Food",
+      "tags": [
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "RyżBiałyDlugolkg €",
+      "product_pl": "RyżBiałyDługo1kg",
+      "product_en": "White long grain rice 1kg",
       "quantity": 1.0,
       "unit_price": 3.89,
       "total": 3.89,
       "discount": 0.0,
-      "final_total": 3.89
+      "final_total": 3.89,
+      "category": "Food",
+      "tags": [
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Udo z kur meg p kg €",
+      "product_pl": "Udo z kur meg p kg",
+      "product_en": "Chicken leg mega pack per kg",
       "quantity": 1.734,
       "unit_price": 13.99,
       "total": 24.26,
-      "discount": -12.46,
-      "final_total": 11.8
+      "discount": 12.46,
+      "final_total": 11.8,
+      "category": "Food",
+      "tags": [
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Cebula Czerw Opa C",
+      "product_pl": "Cebula Czerw Opa",
+      "product_en": "Red onion pack",
       "quantity": 1.0,
       "unit_price": 4.99,
       "total": 4.99,
       "discount": 0.0,
-      "final_total": 4.99
+      "final_total": 4.99,
+      "category": "Food",
+      "tags": [
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Udo z kur mag p kg ©",
+      "product_pl": "Udo z kur meg p kg",
+      "product_en": "Chicken leg mega pack per kg",
       "quantity": 1.701,
       "unit_price": 13.99,
       "total": 23.8,
-      "discount": -12.22,
-      "final_total": 11.58
+      "discount": 12.22,
+      "final_total": 11.58,
+      "category": "Food",
+      "tags": [
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "nęcmegaoweepiśUn",
-      "quantity": 1.9,
+      "product_pl": "RęczMegaSweep120m",
+      "product_en": "Mega Sweep paper towel 120m",
+      "quantity": 1.0,
       "unit_price": 13.79,
       "total": 13.79,
       "discount": 0.0,
-      "final_total": 13.79
+      "final_total": 13.79,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "NapCocaColaZerol,7£ A",
+      "product_pl": "NapCocaColaZero1,75",
+      "product_en": "Coca-Cola Zero 1.75l",
       "quantity": 1.0,
       "unit_price": 8.65,
       "total": 8.65,
       "discount": 0.0,
-      "final_total": 8.65
+      "final_total": 8.65,
+      "category": "Food",
+      "tags": [
+        "personal care",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "But Plastik kaucja brak",
+      "product_pl": "But Plastik kaucja",
+      "product_en": "Plastic bottle deposit fee",
       "quantity": 1.0,
       "unit_price": 0.5,
       "total": 0.5,
       "discount": 0.0,
-      "final_total": 0.5
+      "final_total": 0.5,
+      "category": "Other",
+      "tags": [
+        "personal care"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "OlejRzepakPośski11 €",
+      "product_pl": "OlejRzepakPolski1l",
+      "product_en": "Polish rapeseed oil 1l",
       "quantity": 1.0,
       "unit_price": 8.49,
       "total": 8.49,
       "discount": 0.0,
-      "final_total": 8.49
+      "final_total": 8.49,
+      "category": "Food",
+      "tags": [
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Czosnek Opak 2509 ©",
+      "product_pl": "Czosnek Opak 250g",
+      "product_en": "Garlic pack 250g",
       "quantity": 1.0,
       "unit_price": 7.99,
       "total": 7.99,
       "discount": 0.0,
-      "final_total": 7.99
+      "final_total": 7.99,
+      "category": "Food",
+      "tags": [
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "aja Sci6t Mx20szt ©",
+      "product_pl": "Jaja Ściół Mx20szt",
+      "product_en": "Barn eggs mix 20 pcs",
       "quantity": 1.0,
       "unit_price": 19.99,
       "total": 19.99,
       "discount": 0.0,
-      "final_total": 19.99
+      "final_total": 19.99,
+      "category": "Food",
+      "tags": [
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "BatLetheAaASszt A",
+      "product_pl": "BatLetheAAA8szt",
+      "product_en": "Lethe AAA batteries 8 pack",
       "quantity": 1.0,
       "unit_price": 10.99,
       "total": 10.99,
       "discount": 0.0,
-      "final_total": 10.99
+      "final_total": 10.99,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "BatEnergMaxAAdszt A 1.000",
-      "quantity": 1.399,
-      "unit_price": null,
+      "product_pl": "BatEnergMaxAA4szt",
+      "product_en": "Energizer Max AA batteries 4 pack",
+      "quantity": 1.0,
+      "unit_price": 13.99,
       "total": 13.99,
       "discount": 0.0,
-      "final_total": 13.99
+      "final_total": 13.99,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "KremD CiaNive300ml A",
+      "product_pl": "KremD CiaNive300ml",
+      "product_en": "Nivea body cream 300ml",
       "quantity": 1.0,
       "unit_price": 26.49,
       "total": 26.49,
       "discount": 0.0,
-      "final_total": 26.49
+      "final_total": 26.49,
+      "category": "Hygiene",
+      "tags": [
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "wońaNŚmieci351:155 A",
+      "product_pl": "WorkiNŚmieci35lx15s",
+      "product_en": "Trash bags 35l 15 pcs",
       "quantity": 1.0,
       "unit_price": 4.99,
       "total": 4.99,
-      "discount": 0.0,
-      "final_total": 4.99
+      "discount": 1.5,
+      "final_total": 3.49,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "WorkinSmieci35ix15s A",
+      "product_pl": "WorkiNŚmieci35lx15s",
+      "product_en": "Trash bags 35l 15 pcs",
       "quantity": 1.0,
       "unit_price": 4.99,
       "total": 4.99,
-      "discount": 0.0,
-      "final_total": 4.99
+      "discount": 1.5,
+      "final_total": 3.49,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "ProszekUltColo3,25%kg A",
+      "product_pl": "ProszekUltColo3,25kg",
+      "product_en": "Ultra Color washing powder 3.25kg",
       "quantity": 1.0,
       "unit_price": 29.99,
       "total": 29.99,
       "discount": 0.0,
-      "final_total": 29.99
+      "final_total": 29.99,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "EdenFreshEscopel.Bl A",
+      "product_pl": "EdenFreshEscape1,8l",
+      "product_en": "Eden Fresh Escape fabric softener 1.8l",
       "quantity": 1.0,
       "unit_price": 9.99,
       "total": 9.99,
       "discount": 0.0,
-      "final_total": 9.99
+      "final_total": 9.99,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "ŻelNiveaSport500mi A",
+      "product_pl": "ŻelNiveaSport500ml",
+      "product_en": "Nivea Sport shower gel 500ml",
       "quantity": 1.0,
-      "unit_price": 17.4,
+      "unit_price": 17.49,
       "total": 17.49,
       "discount": 0.0,
-      "final_total": 17.49
+      "final_total": 17.49,
+      "category": "Hygiene",
+      "tags": [
+        "personal care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "rairykyntemon/sum a",
+      "product_pl": "FairyPłynLemon750m",
+      "product_en": "Fairy Lemon dish soap 750ml",
       "quantity": 1.0,
       "unit_price": 11.49,
       "total": 11.49,
       "discount": 0.0,
-      "final_total": 11.49
+      "final_total": 11.49,
+      "category": "Housing",
+      "tags": [
+        "home care",
+        "essential"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "MgiełkaDyCiała200mi A",
+      "product_pl": "MgiełkaD/Ciała200ml",
+      "product_en": "Body mist 200ml",
       "quantity": 1.0,
       "unit_price": 9.99,
       "total": 9.99,
       "discount": 0.0,
-      "final_total": 9.99
+      "final_total": 9.99,
+      "category": "Hygiene",
+      "tags": [
+        "personal care",
+        "optional"
+      ],
+      "_item_categorized": true
     },
     {
-      "product": "Torba T-SHIRT A",
+      "product_pl": "Torba T-SHIRT",
+      "product_en": "T-shirt plastic bag",
       "quantity": 1.0,
       "unit_price": 0.79,
       "total": 0.79,
       "discount": 0.0,
-      "final_total": 0.79
+      "final_total": 0.79,
+      "category": "Other",
+      "tags": [
+        "home care",
+        "optional"
+      ],
+      "_item_categorized": true
     }
   ],
-  "total_paid": 241.02
+  "_categorized": "done"
 }
