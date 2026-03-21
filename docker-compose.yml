@@ -1,15 +1,19 @@
 version: '3.8'
 services:
-  ocr:
+  extractor:
     build: .
     volumes:
-      - ./documents:/app/documents
-      - ./output_text:/app/output_text
-    command: python OllamaTest.py
-
-  parser:
-    build: .
-    volumes:
-      - ./output_text:/app/output_text
+      - ./receipt_images:/app/receipt_images
       - ./output_json:/app/output_json
-    command: python send_to_ollama.py
+      - ./processed_images:/app/processed_images
+    command: python image-json-converter.py
+    environment:
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+
+  categorizer:
+    build: .
+    volumes:
+      - ./output_json:/app/output_json
+    command: python prod_cat_cloud.py
+    environment:
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
