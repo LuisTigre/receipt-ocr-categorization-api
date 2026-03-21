@@ -38,6 +38,27 @@ docker-compose up
 docker-compose up --build
 ```
 
+### FastAPI + Worker (SQLite Queue)
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Terminal 1: start API
+uvicorn api:app --reload --host 0.0.0.0 --port 8000
+
+# Terminal 2: start worker
+python worker.py
+```
+
+API docs:
+- http://localhost:8000/docs
+
+Main endpoints:
+- `POST /receipts` (multipart image upload, returns queued job id)
+- `GET /receipts/{id}` (job status)
+- `GET /receipts/{id}/items` (categorized items)
+- `GET /receipts?status=done` (list filtered jobs)
+
 ---
 
 ## 📁 Project Structure
@@ -47,6 +68,10 @@ docker-compose up --build
 ├── image-json-converter.py    # Step 1: Extract receipt images → JSON
 ├── prod_cat_cloud.py          # Step 2: Categorize products
 ├── run_pipeline.py            # Orchestrator: Runs both sequentially
+├── api.py                     # FastAPI service
+├── worker.py                  # Background queue processor
+├── db.py                      # SQLite schema and queries
+├── receipt_core.py            # Shared extraction/categorization functions
 ├── cleanup_helper.py          # Utility: Clean output & organize files
 │
 ├── Dockerfile                 # Docker image

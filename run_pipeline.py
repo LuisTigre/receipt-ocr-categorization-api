@@ -15,7 +15,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent
 SCRIPTS = [
     ("Extraction", "image-json-converter.py"),
-    ("Categorization", "prod_cat_cloud.py"),
+    ("Categorization", "prod_cat_cloud.py"),   
 ]
 
 # =========================

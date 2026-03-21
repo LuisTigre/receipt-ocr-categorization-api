@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   pipeline:
     build: .
@@ -6,6 +5,35 @@ services:
       - ./receipt_images:/app/receipt_images
       - ./output_json:/app/output_json
       - ./processed_images:/app/processed_images
+      - ./receipts.db:/data/receipts.db
     command: python run_pipeline.py
     environment:
       - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+      - RECEIPTS_DB_PATH=/data/receipts.db
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./receipt_images:/app/receipt_images
+      - ./output_json:/app/output_json
+      - ./processed_images:/app/processed_images
+      - ./receipts.db:/data/receipts.db
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+    environment:
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+      - RECEIPTS_DB_PATH=/data/receipts.db
+
+  worker:
+    build: .
+    volumes:
+      - ./receipt_images:/app/receipt_images
+      - ./output_json:/app/output_json
+      - ./processed_images:/app/processed_images
+      - ./receipts.db:/data/receipts.db
+    command: python worker.py
+    environment:
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+      - RECEIPTS_DB_PATH=/data/receipts.db
+      - WORKER_POLL_INTERVAL=5
