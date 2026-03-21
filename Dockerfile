@@ -8,5 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY image-json-converter.py .
 COPY prod_cat_cloud.py .
+COPY run_pipeline.py .
 
 RUN mkdir -p receipt_images output_json processed_images

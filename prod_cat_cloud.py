@@ -23,24 +23,18 @@ OLLAMA_CLIENT = Client(
 CATEGORIES = [
     "Food",
     "Hygiene",
-    "Housing",
+    "Household",     
     "Transportation",
-    "Media",
+    "Entertainment", 
     "Clothing",
     "Other"
 ]
 
 TAGS = [
-    "personal care",
-    "home care",
-    "home rental",
-    "work-related",
-    "delivery",
-    "bicycle",
-    "entertainment",
-    "self development",
     "essential",
-    "optional"
+    "optional",
+    "work-related",
+    "self development"
 ]
 
 # =========================
@@ -50,26 +44,37 @@ def get_category_and_tags(product_name, product_en):
     name = product_en if product_en else product_name
 
     prompt = (
-        f"You are a supermarket product categorizer.\n\n"
-        f"Product: '{name}'\n\n"
-        f"Task 1 — Assign exactly ONE category from this list:\n"
-        f"{chr(10).join(f'- {c}' for c in CATEGORIES)}\n\n"
-        f"Task 2 — Assign one or more relevant tags from this list:\n"
-        f"{chr(10).join(f'- {t}' for t in TAGS)}\n\n"
-        f"Rules:\n"
-        f"- Category must be exactly one from the list above\n"
-        f"- Tags can be one or more from the list above\n"
-        f"- If category is unclear use 'Other'\n"
-        f"- If no tag fits use 'personal care'\n\n"
-        f"Examples:\n"
-        f"- 'Coca-Cola Zero' -> category: Food, tags: personal care, optional\n"
-        f"- 'Garbage bags 35L' -> category: Housing, tags: home care, essential\n"
-        f"- 'Shower gel Nivea' -> category: Hygiene, tags: personal care, essential\n"
-        f"- 'Paper towel roll' -> category: Housing, tags: home care, essential\n"
-        f"- 'Shopping Bag' -> category: Other, tags: home care, optional\n\n"
-        f"Reply in this exact format and nothing else:\n"
-        f"category: <category>\n"
-        f"tags: <tag1>, <tag2>"
+    f"You are a supermarket product categorizer.\n\n"
+    f"Product: '{name}'\n\n"
+
+    f"Step 1 — Identify the TYPE of product (e.g., staple food, snack, cleaning product, hygiene product, beverage, etc.)\n"
+    f"Step 2 — Assign exactly ONE category from this list:\n"
+    f"{chr(10).join(f'- {c}' for c in CATEGORIES)}\n\n"
+
+    f"Step 3 — Assign exactly ONE tag from this list:\n"
+    f"{chr(10).join(f'- {t}' for t in TAGS)}\n\n"
+
+    f"Rules for tags:\n"
+    f"- 'essential' = basic needs (staple foods, hygiene, cleaning, basic household)\n"
+    f"- 'optional' = snacks, sweets, desserts, sugary drinks, luxury or non-essential items\n"
+    f"- Decide based on the TYPE of product, not the specific brand\n"
+    f"- Never assign both tags\n"
+    f"- If unsure, default to 'essential'\n\n"
+    f"- Be strict: only mark 'essential' if the item is truly necessary for basic living\n"
+    f"- Many items are optional, do not overuse 'essential'\n"
+    f"- Convenience items (bags, softeners, extras) are usually 'optional'\n"
+
+    f"Examples:\n"
+    f"- 'Rice' (staple food) -> category: Food, tags: essential\n"
+    f"- 'Chocolate cookies' (snack) -> category: Food, tags: optional\n"
+    f"- 'Coca-Cola' (soft drink) -> category: Food, tags: optional\n"
+    f"- 'Chicken meat' (protein staple) -> category: Food, tags: essential\n"
+    f"- 'Shower gel' (hygiene product) -> category: Hygiene, tags: essential\n"
+    f"- 'Dish soap' (cleaning product) -> category: Household, tags: essential\n\n"
+
+    f"Reply ONLY in this format:\n"
+    f"category: <category>\n"
+    f"tags: <tag>"
     )
 
     try:

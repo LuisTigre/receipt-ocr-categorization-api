@@ -1,19 +1,11 @@
 version: '3.8'
 services:
-  extractor:
+  pipeline:
     build: .
     volumes:
       - ./receipt_images:/app/receipt_images
       - ./output_json:/app/output_json
       - ./processed_images:/app/processed_images
-    command: python image-json-converter.py
-    environment:
-      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
-
-  categorizer:
-    build: .
-    volumes:
-      - ./output_json:/app/output_json
-    command: python prod_cat_cloud.py
+    command: python run_pipeline.py
     environment:
       - OLLAMA_API_KEY=${OLLAMA_API_KEY}
