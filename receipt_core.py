@@ -5,6 +5,8 @@ from pathlib import Path
 
 from ollama import Client
 
+from db import list_categories, list_tags
+
 MODEL_NAME = "gemini-3-flash-preview"
 
 EXTRACTION_PROMPT = """You are a precise receipt data extractor.
@@ -39,22 +41,8 @@ Return ONLY this JSON structure, no explanation, no markdown:
   ]
 }"""
 
-CATEGORIES = [
-    "Food",
-    "Hygiene",
-    "Household",
-    "Transportation",
-    "Entertainment",
-    "Clothing",
-    "Other",
-]
-
-TAGS = [
-    "essential",
-    "optional",
-    "work-related",
-    "self development",
-]
+DEFAULT_FALLBACK_CATEGORY = "Other"
+DEFAULT_FALLBACK_TAG = "optional"
 
 
 def get_ollama_client() -> Client:
@@ -117,17 +105,39 @@ def extract_receipt_from_image(image_path: Path, retries: int = 3):
     return None
 
 
-def get_category_and_tags(product_name: str, product_en: str):
+def _get_available_categories():
+    rows = list_categories()
+    names = [row["name"] for row in rows]
+    return names or [DEFAULT_FALLBACK_CATEGORY]
+
+
+def _get_available_tags():
+    rows = list_tags()
+    names = [row["name"] for row in rows]
+    return names or [DEFAULT_FALLBACK_TAG]
+
+
+def _fallback_category(categories):
+    return DEFAULT_FALLBACK_CATEGORY if DEFAULT_FALLBACK_CATEGORY in categories else categories[0]
+
+
+def _fallback_tag(tags):
+    return DEFAULT_FALLBACK_TAG if DEFAULT_FALLBACK_TAG in tags else tags[0]
+
+
+def get_category_and_tags(product_name: str, product_en: str, categories=None, tags=None):
     name = product_en if product_en else product_name
+    valid_categories = categories or _get_available_categories()
+    valid_tags = tags or _get_available_tags()
 
     prompt = (
         f"You are a supermarket product categorizer.\\n\\n"
         f"Product: '{name}'\\n\\n"
         f"Step 1 - Identify the TYPE of product (e.g., staple food, snack, cleaning product, hygiene product, beverage, etc.)\\n"
         f"Step 2 - Assign exactly ONE category from this list:\\n"
-        f"{chr(10).join(f'- {category}' for category in CATEGORIES)}\\n\\n"
+        f"{chr(10).join(f'- {category}' for category in valid_categories)}\\n\\n"
         f"Step 3 - Assign exactly ONE tag from this list:\\n"
-        f"{chr(10).join(f'- {tag}' for tag in TAGS)}\\n\\n"
+        f"{chr(10).join(f'- {tag}' for tag in valid_tags)}\\n\\n"
         f"Rules for tags:\\n"
         f"- 'essential' = basic needs (staple foods, hygiene, cleaning, basic household)\\n"
         f"- 'optional' = snacks, sweets, desserts, sugary drinks, luxury or non-essential items\\n"
@@ -146,15 +156,15 @@ def get_category_and_tags(product_name: str, product_en: str):
         )
         raw = response.message.content.strip()
 
-        category = "Other"
-        tags = ["optional"]
+        category = _fallback_category(valid_categories)
+        parsed_tags = [_fallback_tag(valid_tags)]
 
         for line in raw.splitlines():
             line_lower = line.strip().lower()
 
             if line_lower.startswith("category:"):
                 value = line_lower.replace("category:", "").strip()
-                for valid_category in CATEGORIES:
+                for valid_category in valid_categories:
                     if valid_category.lower() in value:
                         category = valid_category
                         break
@@ -162,23 +172,28 @@ def get_category_and_tags(product_name: str, product_en: str):
             if line_lower.startswith("tags:"):
                 value = line_lower.replace("tags:", "").strip()
                 found = []
-                for valid_tag in TAGS:
+                for valid_tag in valid_tags:
                     if valid_tag.lower() in value:
                         found.append(valid_tag)
                 if found:
-                    tags = found
+                    parsed_tags = found
 
-        return category, tags
+        return category, parsed_tags
 
     except Exception as error:
         print(f"   [ERROR] {name}: {error}")
-        return "Other", ["optional"]
+        return _fallback_category(valid_categories), [_fallback_tag(valid_tags)]
 
 
 def categorize_receipt_data(data: dict):
     items = data.get("items", [])
     if not items:
         return data
+
+    valid_categories = _get_available_categories()
+    valid_tags = _get_available_tags()
+    fallback_category = _fallback_category(valid_categories)
+    fallback_tag = _fallback_tag(valid_tags)
 
     for item in items:
         if item.get("_item_categorized"):
@@ -188,12 +203,17 @@ def categorize_receipt_data(data: dict):
         product_en = item.get("product_en", "").strip()
 
         if not product_name and not product_en:
-            item["category"] = "Other"
-            item["tags"] = ["optional"]
+            item["category"] = fallback_category
+            item["tags"] = [fallback_tag]
             item["_item_categorized"] = True
             continue
 
-        category, tags = get_category_and_tags(product_name, product_en)
+        category, tags = get_category_and_tags(
+            product_name,
+            product_en,
+            categories=valid_categories,
+            tags=valid_tags,
+        )
         item["category"] = category
         item["tags"] = tags
         item["_item_categorized"] = True
