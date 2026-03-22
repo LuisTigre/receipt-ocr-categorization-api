@@ -1,5 +1,7 @@
 # Receipt AI - Cloud-Based Pipeline
 
+AI-powered receipt OCR and product categorization API with editable categories/tags, recategorization endpoints, and SQLite-backed data management.
+
 ## 📋 Overview
 
 A clean, cloud-based receipt processing pipeline that:
